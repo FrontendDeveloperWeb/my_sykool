@@ -8,7 +8,7 @@ import ProfileForm from '@/components/partial/staffform/profileform';
 import IncreamentHistoryForm from '@/components/partial/staffform/increamenthistoryform';
 import PayRoll from '@/components/partial/staffform/payroll';
 import SecurityDeposit from '@/components/partial/staffform/securitydeposit';
-import LoanAdvance from '@/components/partial/staffform/loaaAdvanceform';
+import LoanAdvance from '@/components/partial/staffform/loaaadvanceform';
 import StaffDocumentsForm from '@/components/partial/staffform/staffdocumentsform';
 
 const items = [
