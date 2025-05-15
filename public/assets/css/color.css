@@ -1,0 +1,58 @@
+.bg-green {
+    background-color: rgb(40, 199, 111, 0.12);
+    color: rgb(40, 199, 111);
+}
+
+.bg-red {
+    background-color: rgb(234, 84, 85, 0.12);
+    color: rgb(234, 84, 85);
+}
+
+.bg-aqua {
+    background-color: rgb(0, 207, 232, 0.12);
+    color: rgb(0, 207, 232);
+}
+
+.bg-orange {
+    background-color: rgb(255, 159, 67, 0.12);
+    color: rgb(255, 159, 67);
+}
+
+.bg-badge {
+    background-color: rgb(128, 116, 229, 0.12);
+    color: rgb(128, 116, 229) !important;
+
+}
+
+.border-purple {
+    border-color: rgb(128, 116, 229);
+}
+
+.border-purple svg {
+    color: rgb(128, 116, 229);
+}
+
+.border-red {
+    border-color: rgb(234, 84, 85);
+}
+
+.border-red svg {
+    color: rgb(234, 84, 85);
+}
+
+.color-fff {
+    color: #fff;
+}
+
+.color-light {
+    color: #6e6b7b !important;
+
+}
+
+.color-purple {
+    color: rgb(128, 116, 229) !important;
+}
+
+.text-light {
+    color: #d1d1d8 !important;
+}

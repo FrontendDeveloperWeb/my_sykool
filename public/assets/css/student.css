@@ -1,0 +1,274 @@
+.circle-btn {
+    border-radius: 50%;
+    height: 40px !important;
+    font-size: 2px;
+    width: 40px !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-btn .ant-btn-icon {
+    margin: 0;
+}
+
+.red-border-btn svg {
+    color: red !important;
+    font-size: 14px;
+}
+
+.ant-tabs-tab {
+    margin: 0 0 0 10px !important;
+}
+
+.ant-tabs .ant-tabs-content-holder {
+    padding: 0 15px !important;
+}
+
+.check-main {
+    position: relative;
+}
+
+.check-child {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+/* Student Inner Pages CSS Start */
+
+.student_details_card {
+    padding: 18px 22px;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 0px 13px 0px rgba(222, 222, 222, 0.75);
+}
+
+.table_wrapper {
+    padding: 16px 22px 22px;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 0px 13px 0px rgba(222, 222, 222, 0.75);
+}
+
+.student_details_card .profile_img {
+    padding-top: 42px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgb(130, 134, 139);
+}
+
+.student_details_card .profile_img img {
+    border-radius: 6px;
+    padding-bottom: 15px;
+}
+
+.student_details_card .profile_img .txt h5 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.student_details_card .profile_img .txt p {
+    font-size: 14px;
+}
+
+.student_details_card .profile_txt {
+    padding-top: 20px;
+}
+
+.student_details_card .profile_txt h6 {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.student_details_card .profile_txt p {
+    font-size: 15px;
+}
+
+
+.customs_tab .ant-tabs-tab {
+    padding: 0;
+}
+
+.customs_tab .ant-tabs-tab .tab-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #5a5a89;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.customs_student_tab .ant-tabs-nav-list {
+    gap: 0 10px;
+}
+
+.customs_student_tab .ant-tabs-nav {
+    margin-bottom: 5px;
+}
+
+.customs_tab .ant-tabs-tab-active .tab-label {
+    background-color: #8c5eff;
+    color: white;
+    box-shadow: 0 2px 8px rgba(140, 94, 255, 0.3);
+}
+
+.customs_tab .ant-tabs-tab-active .tab-label svg {
+    fill: white;
+}
+
+.customs_tab .tab-label svg {
+    width: 16px;
+    height: 16px;
+    fill: #5a5a89;
+    transition: fill 0.3s ease;
+}
+
+.customs_student_tab .ant-tabs-tab .tab-icon {
+    padding: 0px !important;
+    background-color: transparent;
+    border-radius: inherit;
+    width: inherit;
+    height: inherit;
+    margin-left: 0px !important;
+}
+
+.customs_student_tab .ant-tabs-tab .anticon-right {
+    display: none !important;
+}
+
+.customs_student_tab .ant-tabs-tab-active .tab-button {
+    background: #8074e5;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 1px 9px 22px -12px rgba(128, 116, 229, .65);
+}
+
+.customs_student_tab .ant-tabs-tab-active p {
+    color: white !important;
+    margin-left: 6px !important;
+    margin-right: 0px !important;
+    font-weight: 400;
+}
+
+.customs_student_tab .ant-tabs-tab-active .tab-icon svg {
+    color: white !important;
+}
+
+.customs_student_tab .ant-tabs-tab .tab-icon svg {
+    color: #5e5873;
+    font-size: 16px;
+}
+
+.customs_student_tab .ant-tabs-tab p {
+    color: #5e5873;
+    font-weight: 400;
+    margin-left: 7px !important;
+}
+
+.customs_student_tab h2 {
+    font-size: 18px;
+}
+
+
+.table_wrapper tr {
+    height: 43px;
+}
+
+.table_wrapper .ant-table-wrapper .ant-table-container .ant-table-thead th {
+    font-size: 11px !important;
+    padding-left: 0px !important;
+    font-weight: 800 !important;
+}
+
+.table_wrapper .ant-table-container .ant-table-selection-column {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+.table_wrapper .ant-table-thead>tr>th.ant-table-selection-column {
+    padding-right: 0px !important;
+    line-height: 26px;
+}
+
+.table_wrapper .ant-table-selection-column {
+    min-width: 32px !important;
+}
+
+.table_wrapper .ant-table-cell {
+    padding: 6px 0px !important;
+}
+
+.table_wrapper .ant-table-content {
+    box-shadow: inherit;
+}
+
+.table_wrapper .total_dues h5 {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #5e5873;
+}
+
+.fees_history .challan-item {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.fees_history .challan-item .slipNumber {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #5e5873;
+    font-weight: 500;
+}
+
+.fees_history .challan-item .amount {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6e6b7b;
+}
+
+.fees_history .challan-item .date span {
+    color: #b9b9c3;
+    font-size: 12px;
+}
+
+.fees_history .ant-timeline-item-head.ant-timeline-item-head-blue {
+    background-color: #00cfe8;
+    width: 12px;
+    height: 12px;
+    left: -1px;
+    border: inherit;
+    box-shadow: 0px 0px 5px 4px rgba(0, 209, 232, 0.211);
+}
+
+.customs_student_tab .color-purple {
+    padding: 18px 0;
+}
+
+.customs_student_tab .color-purple span {
+    font-weight: 500;
+}
+
+.customs_student_tab .bg-red {
+    padding: 3px 8px;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px !important;
+}
+
+.customs_student_tab .ant-table-wrapper .ant-table-container .ant-table-thead th {
+    font-size: 12px !important;
+}
+
+.customs_student_tab .uploadDocTxt {
+    color: #4b4b4b;
+    font-size: 14px;
+}
+
+/* Student Inner Pages CSS End */

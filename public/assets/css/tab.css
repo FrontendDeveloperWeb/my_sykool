@@ -1,0 +1,48 @@
+
+.tab-button svg{
+    font-size: 12px;
+}
+.ant-tabs-tab .tab-icon{
+    border: 1px solid transparent;
+    padding: 3px 11px;
+    background-color: rgba(128,116,229,.08);
+    border-radius: .358rem;
+}
+.ant-tabs-tab .tab-icon svg{
+    color: #8074e5;
+    font-size: 16px;
+    
+}
+.ant-tabs-tab p{
+    
+    color: #b8c2cc;
+    font-weight: 600;
+}
+.ant-tabs-tab-active .tab-icon{
+    border: 1px solid transparent;
+    padding: 3px 11px;
+    background-color: #8074e5;
+    border-radius: .358rem;
+    box-shadow: 0 3px 6px 0 rgba(105, 108, 255, .4);
+}
+.ant-tabs-tab-active .tab-icon button,
+.ant-tabs-tab .tab-icon button{
+    background-color: transparent;
+}
+.ant-tabs-tab-active .tab-icon svg{
+    color: #fff;
+    font-size: 16px;
+    
+}
+.ant-tabs-tab-active p{
+    color: #8074e5;
+    font-weight: 600;
+}
+.ant-tabs-nav::before{
+    content: none !important;
+}
+
+
+.ant-tabs-ink-bar{
+    background-color: transparent !important;
+}

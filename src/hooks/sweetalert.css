@@ -1,0 +1,57 @@
+/* Custom SweetAlert Popup */
+.custom-swal-popup {
+    border-radius: 12px; /* Soft rounded corners */
+    background-color: #f6f6f6; /* Light, neutral background */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Spacing inside the alert */
+  }
+  
+  /* Title Styling */
+  .custom-swal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50; /* Dark navy blue */
+    margin-bottom: 10px;
+  }
+  
+  /* Content Styling */
+  .custom-swal-content {
+    font-size: 18px;
+    color: #34495e; /* Medium dark blue-gray */
+  }
+  
+  /* Confirm Button Styling */
+  .custom-swal-confirm-btn {
+    background-color: #2ecc71; /* Bright green for confirm */
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-swal-confirm-btn:hover {
+    background-color: #27ae60; /* Darker green on hover */
+  }
+  
+  /* Cancel Button Styling */
+  .custom-swal-cancel-btn {
+    background-color: #e74c3c; /* Bright red for cancel */
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .custom-swal-cancel-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  

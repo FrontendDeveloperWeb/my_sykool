@@ -1,0 +1,366 @@
+@media (max-width: 575.98px) {
+    /* CSS yahan likho */
+}
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* CSS yahan likho */
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .ant-layout-header {
+        width: 94% !important;
+        margin: 20px !important;
+
+    }
+
+    .mb-4 {
+        margin-bottom: 12px !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 12px !important;
+    }
+
+    .px-3 {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .pt-4 {
+        padding-top: 10px !important;
+    }
+
+    .pb-4 {
+        padding-bottom: 10px !important;
+    }
+
+    .me-3 {
+        margin-right: 10px !important;
+    }
+
+    .header-tab-btn {
+        font-size: 12px;
+    }
+
+    .ant-layout-header .ant-space-compact button,
+    .main-box .ant-space-compact button {
+        font-size: 12px;
+    }
+
+    .font-16 {
+        font-size: 12px;
+    }
+
+    .mb-4 {
+        margin-bottom: 12px !important;
+    }
+
+    .px-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .me-3 {
+        margin-right: 10px !important;
+    }
+
+    .header-tab-btn {
+        font-size: 12px;
+    }
+
+    .ant-layout-header .ant-space-compact button,
+    .main-box .ant-space-compact button {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .font-16 {
+        font-size: 14px;
+    }
+
+    .add-btn {
+        font-size: 12px;
+    }
+
+    .add-btn .ant-btn-icon {
+        font-size: 16px;
+    }
+
+    .ant-layout {
+        margin-inline-start: 0 !important;
+    }
+
+    .header-tab-btn {
+        padding: 4px 6px;
+    }
+
+    .responsive-avatar.ant-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .dashboard-icons {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dashboard-icons svg {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .eye-icon svg {
+        font-size: 15px;
+    }
+
+    .dash-card {
+        padding: 8px 10px;
+    }
+
+    .font-20 {
+        font-size: 16px;
+    }
+
+    .ant-table-wrapper .ant-table-container .ant-table-thead th {
+        font-size: 11px !important;
+    }
+
+    .bg-badge {
+        font-size: 11px;
+    }
+
+    main.ant-layout-content .main-box {
+        padding: 14px 10px;
+        margin-bottom: 15px;
+    }
+
+
+    .font-18 {
+        font-size: 16px;
+    }
+
+    .dashboard-icons {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .px-5 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .save-btn {
+        font-size: 12px !important;
+        padding: 9px 15px;
+    }
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .header-buttons {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px !important;
+        /* to avoid overlap with scrollbar */
+        scrollbar-height: thin !important;
+    }
+
+    /* Chrome, Edge, Safari */
+    .header-buttons::-webkit-scrollbar {
+        height: 6px !important;
+    }
+
+    .header-buttons::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        /* light gray thumb */
+        border-radius: 10px !important;
+    }
+
+    .header-buttons::-webkit-scrollbar-track {
+        background: transparent !important;
+    }
+
+    /* Firefox */
+    .header-buttons {
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(0, 0, 0, 0.2) transparent !important;
+    }
+
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .ant-layout-header {
+
+        width: 96% !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 12px !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 12px !important;
+    }
+
+    .px-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .me-3 {
+        margin-right: 10px !important;
+    }
+
+    .header-tab-btn {
+        font-size: 12px;
+    }
+
+    .ant-layout-header .ant-space-compact button,
+    .main-box .ant-space-compact button {
+        font-size: 12px;
+    }
+
+    .font-16 {
+        font-size: 15px;
+    }
+
+    .mb-4 {
+        margin-bottom: 12px !important;
+    }
+
+    .px-3 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .me-3 {
+        margin-right: 10px !important;
+    }
+
+    .header-tab-btn {
+        font-size: 12px;
+    }
+
+    .ant-layout-header .ant-space-compact button,
+    .main-box .ant-space-compact button {
+        font-size: 12px;
+    }
+
+    .font-16 {
+        font-size: 15px;
+    }
+
+    .add-btn {
+        font-size: 12px;
+    }
+
+    .add-btn .ant-btn-icon {
+        font-size: 16px;
+    }
+
+    .ant-layout {
+        margin-inline-start: 0 !important;
+    }
+
+    .dashboard-icons {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dashboard-icons svg {
+        font-size: 13px;
+    }
+
+    main.ant-layout-content .main-box {
+        padding: 14px 10px;
+        margin-bottom: 15px;
+    }
+
+
+
+    .font-18 {
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-icons {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dashboard-icons svg {
+        font-size: 13px;
+    }
+
+    main.ant-layout-content .main-box {
+        padding: 14px 10px;
+        margin-bottom: 15px;
+    }
+
+    
+
+    .font-18 {
+        font-size: 16px;
+    }
+    .ant-layout-header>div::before {
+    right: 5.2%;
+    top: 30%;
+}
+}
+
+/* Extra extra large devices (≥1400px) */
+@media (min-width: 1400px) and (max-width: 1600px){
+    .ant-layout-header {
+
+           width: calc(100% - 4.4rem - 74px);
+
+    }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+}
