@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import InnerLayout from '@/components/shared/layout/innerlayout'
 import HeaderButtons from '@/components/shared/headerbuttons';
-import CustomDropdown from '@/components/shared/dropdown'
 import FlatButton from '@/components/shared/button/flatbutton';
 import IconButton from '@/components/shared/button/iconbutton';
 import BaseInput from "@/components/shared/inputs";
 import CustomTable from '@/components/shared/table/customtable';
-import Drawer from '@/components/shared/drawer/mydrawer';
-import { ReloadOutlined, UploadOutlined, SearchOutlined, ShrinkOutlined, EditOutlined, LoginOutlined, FilterOutlined, ScanOutlined, UserAddOutlined, UsergroupAddOutlined, MobileOutlined, ImportOutlined, ExportOutlined, ArrowDownOutlined, ArrowUpOutlined, PrinterOutlined, PlusOutlined, CalendarOutlined, EyeOutlined, DeleteOutlined, CloseOutlined } from '@ant-design/icons'
+import {  SearchOutlined,  EditOutlined,  FilterOutlined,  MobileOutlined,  ArrowDownOutlined, ArrowUpOutlined, PrinterOutlined,DeleteOutlined, CloseOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom';
 
 // Clipboard Icon
@@ -281,7 +279,7 @@ const Staff = () => {
         <div className="row">
           <div className="col-12">
             <div className="main-box">
-              <div className='d-flex align-items-center flex-wrap mt-3 '>
+              <div className='d-flex align-items-center mt-3 '>
                 <div>
                   <IconButton icon="+" title="Add Staff" className="add-btn  btn me-3" onClick={() => navigate("/add-staff")} />
                 </div>

@@ -61,7 +61,7 @@ const CustomTable = ({
         rowKey={rowKey}
         scroll={{ x: "max-content" }}
         {...(enableRowSelection ? { rowSelection } : {})}
-        className={`${styles.customTable} ${className || ''}`}
+        className={`${styles.customTable} ${className || ""}`}
       />
       {showPagination && (
         <div className="custom-pagination d-flex justify-content-end mt-4">

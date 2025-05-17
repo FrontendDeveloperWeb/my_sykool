@@ -1,11 +1,22 @@
-import React, { useState, memo } from "react";
+import React, { useEffect, memo } from "react";
 import FlatButton from "@/components/shared/button/flatbutton";
 import BaseInput from "@/components/shared/inputs";
 import { Form } from "antd";
 import { useMutation } from "../../hooks/reactQuery";
 import { fieldRules } from "../../config/rules";
-const AddDepartment = ({ onClose }) => {
+const AddDepartment = ({ onClose, editData }) => {
   const [form] = Form.useForm();
+  const isEditMode = !!editData;
+
+  useEffect(() => {
+    if (isEditMode && editData) {
+      form.setFieldsValue({
+        name: editData.name,
+      });
+    } else {
+      form.resetFields();
+    }
+  }, [editData, form, isEditMode]);
   const { mutate, isPending: loading } = useMutation("add_department", {
     useFormData: true,
     showSuccessNotification: true,
@@ -19,13 +30,19 @@ const AddDepartment = ({ onClose }) => {
   });
   const onFinish = (values) => {
     const payload = { ...values };
-    mutate(payload);
+    if (isEditMode) {
+      payload._method = "PUT";
+      mutate({ data: payload, slug: editData.uid });
+    } else {
+      // For creates, just send the payload
+      mutate(payload);
+    }
   };
 
   return (
     <>
       <Form
-        name="basic"
+        name="adddepartment"
         initialValues={{ remember: true }}
         form={form}
         onFinish={onFinish}
@@ -42,7 +59,7 @@ const AddDepartment = ({ onClose }) => {
 
         <FlatButton
           htmlType="submit"
-          title={loading ? "Saving" : "Save"}
+          title={loading ? "Saving..." : isEditMode ? "Update" : "Save"}
           loading={loading}
           disabled={loading}
           className="save-btn login-btn mt-2"

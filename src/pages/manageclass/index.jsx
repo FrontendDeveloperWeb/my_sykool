@@ -2,110 +2,19 @@ import React, { useState, memo } from "react";
 import InnerLayout from "@/components/shared/layout/innerlayout";
 import HeaderButtons from "@/components/shared/headerbuttons";
 import CustomDropdown from "@/components/shared/dropdown";
-import FlatButton from "@/components/shared/button/flatbutton";
 import IconButton from "@/components/shared/button/iconbutton";
 import BaseInput from "@/components/shared/inputs";
-import CustomTable from "@/components/shared/table/customtable";
 import {
   DownOutlined,
   SearchOutlined,
   ShrinkOutlined,
-  EditOutlined,
-  LoginOutlined,
 } from "@ant-design/icons";
 import Drawer from "@/components/shared/drawer/mydrawer";
-import AddClass from "./add";
-import Adddeparment from "./adddeparment";
+import AddDepartment from "./adddeparment";
 import { useMutation, useQuery } from "../../hooks/reactQuery";
 import useSweetAlert from "@/hooks/useSweetAlert";
-// Constants
-const attendanceColumns = [
-  {
-    title: "CLASS",
-    dataIndex: "class",
-    render: (text) => <a className="badge bg-badge">{text}</a>,
-    width: 150,
-  },
-  {
-    title: "Section",
-    dataIndex: "section",
-    render: (section) => (
-      <>
-        {(section || []).flat().map((item, index) => (
-          <a
-            key={index}
-            className="badge bg-badge"
-            style={{ marginRight: "8px" }}
-          >
-            {item}
-          </a>
-        ))}
-      </>
-    ),
-    width: 150,
-  },
-  {
-    title: "actions",
-    dataIndex: "actions",
-    render: (actions) => (
-      <div className="d-flex align-items-center">
-        {actions.map((item, index) => {
-          let className = "ba dge";
-          let tooltip = "";
-          let placement = "";
-          if (item.type === EditOutlined) {
-            className += " bg-edit";
-            tooltip = "Edit";
-            placement = "left";
-          } else if (item.type === LoginOutlined) {
-            className += " bg-exit";
-            tooltip = "Left Class";
-            placement = "right";
-          }
-
-          return (
-            <FlatButton
-              tootlip={tooltip}
-              placement={placement}
-              key={index}
-              className={className}
-              style={{ marginRight: "8px" }}
-              title={item}
-            />
-          );
-        })}
-      </div>
-    ),
-    width: 20,
-  },
-];
-
-const attendanceData = [
-  {
-    key: "1",
-    class: "Mont",
-    section: ["A"],
-    actions: [<EditOutlined />, <LoginOutlined />],
-  },
-  {
-    key: "2",
-    class: "Mont",
-    section: ["A", "B"],
-    actions: [<EditOutlined />, <LoginOutlined />],
-  },
-  {
-    key: "3",
-    class: "Mont",
-    section: ["A", "B"],
-    actions: [<EditOutlined />, <LoginOutlined />],
-  },
-  {
-    key: "4",
-    class: "Mont",
-    section: ["A", "B"],
-    actions: [<EditOutlined />, <LoginOutlined />],
-  },
-];
+import Classes from "../classes";
+import AddClass from "../classes/add";
 
 // Reusable Drawer Component
 const ReusableDrawer = ({ title, open, onClose, children }) => (
@@ -116,13 +25,13 @@ const ReusableDrawer = ({ title, open, onClose, children }) => (
 
 const ManageClasses = () => {
   const { showAlert } = useSweetAlert();
-
+  const [currentEditDepartment, setCurrentEditDepartment] = useState(null);
   const [drawers, setDrawers] = useState({
     class: false,
     department: false,
   });
 
-  const { data: departmentData } = useQuery("departments", {
+  const { data: departmentData } = useQuery("department", {
     staleTime: 5 * 60 * 1000,
     gcTime: 10 * 60 * 1000,
   });
@@ -135,19 +44,41 @@ const ManageClasses = () => {
   const toggleDrawer = (drawerName) => () => {
     setDrawers((prev) => ({ ...prev, [drawerName]: !prev[drawerName] }));
   };
+  const handleAddClick = () => {
+    setCurrentEditDepartment(null); // Ensure edit data is cleared
+    toggleDrawer("department")();
+  };
+  const handleEditClick = (department) => {
+    setCurrentEditDepartment(department);
+    toggleDrawer("department")();
+  };
   const departmentItems =
-    departmentData?.data?.flatMap((department) => [
-      {
-        key: `edit-${department.uid}`,
-        label: <p onClick={toggleDrawer("department")}>Edit</p>,
-      },
-      {
-        key: `delete-${department.uid}`,
-        label: (
-          <p onClick={() => handleDeleteDepartment(department.uid)}>Delete</p>
-        ),
-      },
-    ]) || [];
+    departmentData?.data?.flatMap((department, index) =>
+      index === 0
+        ? [
+            {
+              key: `edit-${department.uid}`,
+              label: (
+                <p
+                  onClick={() => {
+                    handleEditClick(department);
+                  }}
+                >
+                  Edit
+                </p>
+              ),
+            },
+            {
+              key: `delete-${department.uid}`,
+              label: (
+                <p onClick={() => handleDeleteDepartment(department.uid)}>
+                  Delete
+                </p>
+              ),
+            },
+          ]
+        : []
+    ) || [];
   const handleDeleteDepartment = async (departmentId) => {
     const result = await showAlert({
       text: "Are you sure you want to delete this department?",
@@ -192,7 +123,7 @@ const ManageClasses = () => {
                   <IconButton
                     icon="+"
                     className="plus-btn"
-                    onClick={toggleDrawer("department")}
+                    onClick={handleAddClick}
                   />
                 </div>
               </div>
@@ -217,12 +148,7 @@ const ManageClasses = () => {
                 </div>
               </div>
 
-              {/* Table */}
-              <CustomTable
-                className="my-table mt-4"
-                columns={attendanceColumns}
-                data={attendanceData}
-              />
+              <Classes />
             </div>
           </div>
         </div>
@@ -234,15 +160,24 @@ const ManageClasses = () => {
         open={drawers.class}
         onClose={toggleDrawer("class")}
       >
-        <AddClass />
+        <AddClass onClose={toggleDrawer("class")} />
       </ReusableDrawer>
 
       <ReusableDrawer
-        title="Add Department"
+        title={currentEditDepartment ? "Edit Department" : "Add Department"}
         open={drawers.department}
-        onClose={toggleDrawer("department")}
+        onClose={() => {
+          setCurrentEditDepartment(null);
+          toggleDrawer("department")();
+        }}
       >
-        <Adddeparment onClose={toggleDrawer("department")} />
+        <AddDepartment
+          onClose={() => {
+            setCurrentEditDepartment(null);
+            toggleDrawer("department")();
+          }}
+          editData={currentEditDepartment}
+        />
       </ReusableDrawer>
     </>
   );

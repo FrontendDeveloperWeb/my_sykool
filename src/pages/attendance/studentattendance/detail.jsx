@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import InnerLayout from '@/components/shared/layout/innerlayout'
-import HeaderButtons from '@/components/shared/headerbuttons';
 import FlatButton from '@/components/shared/button/flatbutton';
 import IconButton from '@/components/shared/button/iconbutton';
 
@@ -8,7 +6,7 @@ import BaseInput from "@/components/shared/inputs";
 import CustomTable from '@/components/shared/table/customtable';
 import AttendanceReportCard from '../../../components/shared/card/attendancereportcard';
 import Drawer from '@/components/shared/drawer/mydrawer';
-import { ArrowLeftOutlined, BarChartOutlined, CheckCircleOutlined, ClockCircleOutlined, CloudOutlined, DeleteOutlined, EditOutlined, ExclamationCircleOutlined, LeftOutlined, PlusCircleOutlined, SearchOutlined, SettingOutlined, UserAddOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined, BarChartOutlined, CheckCircleOutlined, ClockCircleOutlined, CloudOutlined, DeleteOutlined,  ExclamationCircleOutlined, PlusCircleOutlined, SearchOutlined, SettingOutlined, UserAddOutlined } from '@ant-design/icons';
 import { Form, Switch } from 'antd';
 
 const cardData = [

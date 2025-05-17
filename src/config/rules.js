@@ -17,7 +17,7 @@ const rules = {
   email: { type: "email", message: "Please enter a valid email address!" },
 
   // Phone validation
- phone: { 
+  phone: { 
     pattern: /^03[0-9]{9}$/, 
     message: "Please enter a valid Pakistan mobile number (03xxxxxxxxx)!" 
   },
@@ -27,10 +27,12 @@ const rules = {
     positive: { min: 0, message: "Value must be positive!" },
     type: { type: "number", message: "Please enter a valid number!" }
   },
-   url: { 
+  
+  url: { 
     pattern: /^(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/, 
     message: "Please enter a valid website URL!" 
   },
+
   // Date validation
   date: { type: "date", message: "Please enter a valid date!" }
 };
@@ -51,6 +53,7 @@ const fieldRules = {
 
   password: [
     rules.required,
+    rules.text.min6
   ],
 
   phone: [
@@ -64,16 +67,20 @@ const fieldRules = {
     rules.number.positive
   ],
 
-   website: [
+  website: [
     rules.url
   ],
 
   date: [
     rules.required,
     rules.date
+  ],
+
+  // Simple required-only rule
+  required: [
+    rules.required
   ]
 };
-
 
 // For backward compatibility
 const login = {

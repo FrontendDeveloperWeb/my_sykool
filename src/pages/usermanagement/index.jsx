@@ -187,7 +187,7 @@ const UserManagement = () => {
                     <div className="col-12">
                         <div className="main-box">
 
-                            <div className='d-flex align-items-center flex-wrap mt-3 '>
+                            <div className='d-flex align-items-center  mt-3 '>
                                 <div>
                                     <FlatButton className="btn save-btn bg-purple" style={{ marginRight: '8px' }} title="Add User" onClick={showAddUserDrawer} />
 

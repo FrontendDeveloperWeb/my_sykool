@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import InnerLayout from '@/components/shared/layout/innerlayout'
 import HeaderButtons from '@/components/shared/headerbuttons';
-import CustomDropdown from '@/components/shared/dropdown'
 import FlatButton from '@/components/shared/button/flatbutton';
 import IconButton from '@/components/shared/button/iconbutton';
 import BaseInput from "@/components/shared/inputs";
 import CustomTable from '@/components/shared/table/customtable';
-import { DownOutlined, SearchOutlined, ShrinkOutlined, EditOutlined, LoginOutlined, SettingOutlined, MessageOutlined, PlusOutlined, EyeOutlined, CalendarOutlined } from '@ant-design/icons'
-import { Form, Tooltip } from 'antd';
+import {  SearchOutlined,   PlusOutlined, EyeOutlined, CalendarOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom';
 
 const salaryColumns = [

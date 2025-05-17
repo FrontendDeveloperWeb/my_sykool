@@ -1,10 +1,13 @@
 
 import FlatButton from '@/components/shared/button/flatbutton';
 import BaseInput from "@/components/shared/inputs";
-import { Form } from 'antd';
+import IconButton from "@/components/shared/button/iconbutton";
+import { Form ,Switch } from 'antd';
+import {PlusOutlined} from "@ant-design/icons";
 
 
 const Timing = () => {
+  const switchonChange = (checked) => console.log(`Switch to ${checked}`);
 
 
     const onFinish = values => {
@@ -32,7 +35,7 @@ const Timing = () => {
                         <BaseInput label="Leaves at *" placeholder="2:00 PM" type="timepiker" />
                     </div>
                     <div className="col-md-2 d-flex align-items-center justify-content-center mt-2">
-                        <IconButton icon={<PlusOutlined />} className="add-btn rounded-5 circle-btn" />
+                        <IconButton icon={<PlusOutlined />} className="bg-white" />
                     </div>
                 </div>
                 <FlatButton htmlType="submit" className="save-btn login-btn mt-4" title="Apply on Staff Profiles" />

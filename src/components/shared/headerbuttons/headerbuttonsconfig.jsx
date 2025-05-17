@@ -19,7 +19,7 @@ export const headerButtonGroups = {
     attendance: [
       { title: "Student Attendance", url: "/attendance-sync" },
       { title: "Staff Attendance", url: "/staff-attendance" },
-      { title: "Device Settings", url: "/attendance-syncs" },
+      { title: "Device Settings", url: "#" },
     ],
     account: [
       { title: "Chart of Accounts", url: "/account" },
